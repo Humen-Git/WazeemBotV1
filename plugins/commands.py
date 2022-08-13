@@ -41,15 +41,26 @@ async def start(client, message):
         await db.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
-        buttons = [[
-            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/Humen_tg'),
-            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟs', url='https://t.me/cv_linkzz')
-            ],[
-            InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
-            InlineKeyboardButton('♨️ ᴀʙᴏᴜᴛ', callback_data='about')
-        ]]
+        T = datetime.datetime.now(pytz.timezone("Asia/Kolkata"))
+        
+        Time = T.hour
+        
+        if Time < 12:
+            greet="ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ" 
+        elif Time < 15:
+            greet="ɢᴏᴏᴅ ᴀғᴛᴇʀɴᴏᴏɴ"
+        elif Time < 20:
+            greet="ɢᴏᴏᴅ ᴇᴠᴇɴɪɴɢ"
+        else:
+            greet="ɢᴏᴏᴅ ɴɪɢʜᴛ"
+            
+        START_TXT = f"""
+<b>{greet} {message.from_user.mention}  ʙᴜᴅᴅʏ
+ᴍʏ ɴᴀᴍᴇ ɪꜱ  <a href=https://t.me/Adv_AutoFilBot><b>Wᴀᴢᴇᴇᴍ</b></a>  ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ʏᴏᴜ ᴍᴏᴠɪᴇꜱ ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ꜱᴇᴇ ᴍʏ ᴘᴏᴡᴇʀ 😈</b>
+"""
+         buttons = [[
+            InlineKeyboardButton('♨️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ♨️', callback_data='start')
+         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
