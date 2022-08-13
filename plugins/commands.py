@@ -58,9 +58,9 @@ async def start(client, message):
 <b>{greet} {message.from_user.mention}  ʙᴜᴅᴅʏ
 ᴍʏ ɴᴀᴍᴇ ɪꜱ  <a href=https://t.me/Adv_AutoFilBot><b>Wᴀᴢᴇᴇᴍ</b></a>  ɪ ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ʏᴏᴜ ᴍᴏᴠɪᴇꜱ ᴊᴜꜱᴛ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ꜱᴇᴇ ᴍʏ ᴘᴏᴡᴇʀ 😈</b>
 """
-         buttons = [
-            InlineKeyboardButton('♨️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ♨️', callback_data='start')
-         ]
+         buttons = [[
+             InlineKeyboardButton('♨️ ᴄʟɪᴄᴋ ʜᴇʀᴇ ♨️', callback_data='start')
+         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
