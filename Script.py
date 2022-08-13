@@ -10,11 +10,11 @@ class script(object):
 • ᴅᴀᴛᴀʙᴀsᴇ : ᴍᴏɴɢᴏ ᴅʙ\n
 📖 Nᴏᴛᴇ : ആരും പേടിക്കേണ്ട എല്ലാവർക്കും  ബോട്ട്  ഉപയോഗിക്കാം</i>"""
     SOURCE_TXT = """<b>NOTE:</b>
-- Eva Maria is a open source project. 
-- Source - https://github.com/EvamariaTG/EvaMaria  
+- Unfortunately This Bot is an Closed source project. 
+-   
 
-<b>hy:</b>
-- <a href=https://t.me/TeamEvamaria>Team Eva Maria</a>"""
+<b>But Base Repo Open Source:</b>
+- <a href=https://github.com/EvamariaTG/EvaMaria>Eva Maria</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
