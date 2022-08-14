@@ -82,6 +82,16 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
+    btn.insert(0,
+        [
+            InlineKeyboardButton(f'♨️ {search} ♨️', 'copyright')
+        ]
+    )
+    btn.insert(1,
+        ]
+               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'files'),
+               InlineKeyboardButton(f'ᴛɪᴘs', 'tips'),
+               InlineKeyboardButton(f'ᴍᴏʀᴇ ғɪʟᴇs', 'more'),
 
     if 0 < offset <= 10:
         off_set = 0
@@ -575,6 +585,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("This Is Your Search Results,You mean none of this or please follow tips", show_alert=True)
     elif query.data == "nomore"
         await query.answer("🤧No More Size Files", show_alert=True)
+    elif query.data == "copyright"
+        await query.answer("this message will delete after 5 minutes for avoid copyright claim\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True)
+    elif query.data == "files"
+        await query.answer("Follow Tips", show_alert=True)
         
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
