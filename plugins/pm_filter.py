@@ -89,7 +89,7 @@ async def next_page(bot, query):
     )
     btn.insert(1,
         [
-               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'tips'),
+               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'files'),
                InlineKeyboardButton(f'ᴛɪᴘs', 'tips'),
                InlineKeyboardButton(f'ᴍᴏʀᴇ', 'more')
         ]
@@ -583,7 +583,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "tips":
         await query.answer("ᴍᴏᴠɪᴇ\n\nSend Movie Name With Correct Spelling,if you still don't get it, add the Released year\nexample:- Thallumala 2022\n━━━━━━━━━━━━━━━━\nsᴇʀɪᴇs\nSend Series Name With Correct Spelling and Season,Episode.\n\nexample: I Am Groot S01 E01\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True)
     elif query.data == "more":
-        await query.answer("This Is Your Search Results,You mean none of this or please follow tips", show_alert=True)
+        await query.answer("This Is Your Search Results,You mean none of this or please follow tips\n\n©Wᴀᴢᴇᴇᴍ", show_alert=True)
     elif query.data == "nomore":
         await query.answer("🤧No More Size Files", show_alert=True)
     elif query.data == "copyright":
@@ -700,7 +700,7 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1,
         [
-               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'tips'),
+               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'files'),
                InlineKeyboardButton(f'ᴛɪᴘs', 'tips'),
                InlineKeyboardButton(f'ᴍᴏʀᴇ', 'more')
         ]
