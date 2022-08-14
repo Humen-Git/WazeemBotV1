@@ -699,7 +699,7 @@ async def auto_filter(client, msg, spoll=False):
         ]
     )
     btn.insert(1,
-        ]
+        [
                InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'tips'),
                InlineKeyboardButton(f'ᴛɪᴘs', 'tips'),
                InlineKeyboardButton(f'ᴍᴏʀᴇ', 'more')
