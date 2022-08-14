@@ -569,6 +569,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "ᴛɪᴘs":
+        await query.answer("ᴍᴏᴠɪᴇ\n\nSend Movie Name With Correct Spelling,if you still don't get it, add the Released year\nexample:- Thallumala 2022\n━━━━━━━━━━━━━━━━\nsᴇʀɪᴇs\nSend Series Name With Correct Spelling and Season,Episode.\n\nexample: I Am Groot S01 E01\n\n© Wᴀᴢᴇᴇᴍ'
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
@@ -623,6 +625,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
     await query.answer('Piracy Is Crime')
+    
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -681,7 +684,7 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🗓 1/1", callback_data="pages")]
+            [InlineKeyboardButton(text="🗒️ ɴᴏ ᴍᴏʀᴇ ғɪʟᴇs ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀ ʙᴀsᴇ", callback_data="pages")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
