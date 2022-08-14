@@ -569,8 +569,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "ᴛɪᴘs":
-        await query.answer("ᴍᴏᴠɪᴇ\n\nSend Movie Name With Correct Spelling,if you still don't get it, add the Released year\nexample:- Thallumala 2022\n━━━━━━━━━━━━━━━━\nsᴇʀɪᴇs\nSend Series Name With Correct Spelling and Season,Episode.\n\nexample: I Am Groot S01 E01\n\n© Wᴀᴢᴇᴇᴍ'
+    elif query.data == "tips":
+        await query.answer("ᴍᴏᴠɪᴇ\n\nSend Movie Name With Correct Spelling,if you still don't get it, add the Released year\nexample:- Thallumala 2022\n━━━━━━━━━━━━━━━━\nsᴇʀɪᴇs\nSend Series Name With Correct Spelling and Season,Episode.\n\nexample: I Am Groot S01 E01\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True)
+    elif query.data == "more"
+        await query.answer("This Is Your Search Results,You mean none of this or please follow tips", show_alert=True)
+    elif query.data == "nomore"
+        await query.answer("🤧No More Size Files", show_alert=True)
+        
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
