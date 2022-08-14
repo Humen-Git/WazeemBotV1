@@ -89,9 +89,9 @@ async def next_page(bot, query):
     )
     btn.insert(1,
         ]
-               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'files'),
+               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'tips'),
                InlineKeyboardButton(f'ᴛɪᴘs', 'tips'),
-               InlineKeyboardButton(f'ᴍᴏʀᴇ ғɪʟᴇs', 'more'),
+               InlineKeyboardButton(f'ᴍᴏʀᴇ', 'more'),
 
     if 0 < offset <= 10:
         off_set = 0
@@ -692,6 +692,18 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
+    btn.insert(0,
+        [
+            InlineKeyboardButton(f'♨️ {search} ♨️', 'copyright')
+        ]
+    )
+    btn.insert(1,
+        ]
+               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'tips'),
+               InlineKeyboardButton(f'ᴛɪᴘs', 'tips'),
+               InlineKeyboardButton(f'ᴍᴏʀᴇ', 'more')
+        ]
+    )
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
@@ -703,7 +715,7 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🗒️ ɴᴏ ᴍᴏʀᴇ ғɪʟᴇs ғᴏᴜɴᴅ ɪɴ ᴍʏ ᴅᴀᴛᴀ ʙᴀsᴇ", callback_data="pages")]
+            [InlineKeyboardButton(text="⛔ ɴᴏ ᴍᴏʀᴇ ғɪʟᴇs", callback_data="no more")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
