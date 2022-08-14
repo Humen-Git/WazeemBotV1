@@ -753,7 +753,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Hᴇʏ {message.from_user.mention}</b>👋🏻\n<b>🔍 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ǫᴜᴇʀʏ ʀᴇsᴜʟᴛ</b>: <code>{search}</code>\n<b>© Pᴏᴡᴇʀᴇᴅ ʙʏ </b>: <b><a href=https://t.me/CinemaVeed>{message.chat.title}</a></b>\nㅤㅤㅤㅤ\n<b><u> Tʜɪs ᴍᴇssᴀɢᴇ ᴡᴀs ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs . Tᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs.</b></u>""
+        cap = f"Hᴇʏ {message.from_user.mention}</b>👋🏻\n<b>🔍 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ǫᴜᴇʀʏ ʀᴇsᴜʟᴛ</b>: <code>{search}</code>\n<b>© Pᴏᴡᴇʀᴇᴅ ʙʏ </b>: <b><a href=https://t.me/CinemaVeed>{message.chat.title}</a></b>\nㅤㅤㅤㅤ\n<b><u> Tʜɪs ᴍᴇssᴀɢᴇ ᴡᴀs ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs . Tᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs.</b></u>"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
