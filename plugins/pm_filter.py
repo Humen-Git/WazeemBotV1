@@ -89,9 +89,9 @@ async def next_page(bot, query):
     )
     btn.insert(1,
         [
-               InlineKeyboardButton(f'📟 {len(files)} ғɪʟᴇs', 'files'),
-               InlineKeyboardButton(f'🔖 ᴛɪᴘs', 'tips'),
-               InlineKeyboardButton(f'📃 ᴍᴏʀᴇ', 'more')
+               InlineKeyboardButton(f'{len(files)} ғɪʟᴇs', 'files'),
+               InlineKeyboardButton(f'ᴛɪᴘs', 'tips'),
+               InlineKeyboardButton(f'ᴍᴏʀᴇ', 'more')
         ]
     )
     if 0 < offset <= 10:
