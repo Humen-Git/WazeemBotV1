@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.jpg" alt="WazeemBot Logo">
+  <img src="assets/Wazeem.jpg" alt="WazeemBot Logo">
 </p>
 <h1 align="center">
   <b>WazeemBot</b>
