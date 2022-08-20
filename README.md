@@ -75,9 +75,9 @@ python3 bot.py
 [![telegram badge](https://img.shields.io/badge/Support-Group-30302f?style=flat&logo=telegram)](https://telegram.dog/WazeemSupport)
 
 
-## Credits 
-* [![Base Repo I Used](https://img.shields.io/static/v1?label=EvaMaria&message=devs&color=critical)](https://github.com/EvamariaTG/evamaria)
-
+## Base Repo
+ • Base Repo I Used 
+         [Eva Maria](https://github.com/EvamariaTG/evamaria)
 
 ## Thanks to 
  - Thanks To [Eva Maria](https://github.com/EvamariaTG/evamaria) Team For Their Awesome Repo
