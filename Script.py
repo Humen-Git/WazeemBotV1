@@ -8,13 +8,12 @@ class script(object):
 • ꜰʀᴀᴍᴇᴡᴏʀᴋ : ᴘʏᴛʜᴏɴ 3\n
 • ʜᴏsᴛᴇᴅ ᴏɴ : ʜᴇʀᴏᴋᴜ\n
 • ᴅᴀᴛᴀʙᴀsᴇ : ᴍᴏɴɢᴏ ᴅʙ\n
-📖 Nᴏᴛᴇ : ആരും പേടിക്കേണ്ട എല്ലാവർക്കും  ബോട്ട്  ഉപയോഗിക്കാം</i>"""
+"""
     SOURCE_TXT = """<b>NOTE:</b>
-- Unfortunately This Bot is an Closed source project. 
--   
+   
 
-<b>But Base Repo Open Source:</b>
-- <a href=https://github.com/EvamariaTG/EvaMaria>Eva Maria</a>"""
+<b> Open Source:</b>
+- <a href=https://t.me/WazeemSupport/320>Tape Here</a>"""
     MANUELFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and EvaMaria will respond whenever a keyword is found the message
@@ -93,8 +92,8 @@ This module only works for my admins
     STATUS_TXT = """<u>Cᴜʀʀᴇɴᴛ Dᴀᴛᴀʙᴀsᴇ Sᴛᴀᴛᴜs</u>
 
 📑 ғɪʟᴇs sᴀᴠᴇᴅ: <code>{}</code>
-👩🏻‍💻 ᴜsᴇʀs: <code>4027</code>
-👥 ɢʀᴏᴜᴘs: <code>114</code>
+👩🏻‍💻 ᴜsᴇʀs: <code>{}</code>
+👥 ɢʀᴏᴜᴘs: <code>{}</code>
 🗂️ ᴏᴄᴄᴜᴘɪᴇᴅ: <code>{}</code> 𝙼𝚒𝙱
 🛒 ғʀᴇᴇ sᴛᴏʀᴀɢᴇ: <code>{}</code> 𝙼𝚒𝙱"""
     LOG_TEXT_G = """#NewGroup
