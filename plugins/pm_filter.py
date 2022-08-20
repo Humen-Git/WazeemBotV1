@@ -429,7 +429,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/Humen_tg'),
-            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟs', url='https://t.me/CVFilmz')
+            InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/WazeemSupport')
         ], [
             InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', callback_data='help'),
             InlineKeyboardButton('♨️ ᴀʙᴏᴜᴛ', callback_data='about')
@@ -754,7 +754,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>Title: {search}\nTotal Files : {len(files)} +\n\n© {message.chat.title}</b>"
+        cap = f"<b>Title: {search}\nRequested By : {message.from_user.mention}\n\n© {message.chat.title}</b>"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -781,7 +781,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("Wʜᴀᴀᴛᴛ!!??.")
+        k = await msg.reply("sorry I Can't Find It.")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -810,7 +810,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Wʜᴀᴀᴛ!!?😵")
+        k = await msg.reply("sorry I Can't Find It")
         await asyncio.sleep(8)
         await k.delete()
         return
