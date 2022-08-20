@@ -84,7 +84,7 @@ async def next_page(bot, query):
         ]
     btn.insert(0,
         [
-            InlineKeyboardButton(f'♨️ {search} ♨️', 'copyright')
+            InlineKeyboardButton(f'♨️ {search} ♨️', url={url})
         ]
     )
     btn.insert(1,
