@@ -25,7 +25,7 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🤖 sᴜᴘᴘᴏʀᴛ', url='https://t.me/TGBot_SupportGroup')
+                InlineKeyboardButton('🤖 sᴜᴘᴘᴏʀᴛ', url='https://t.me/WazeemSupport')
             ],
             [
                 InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
@@ -80,7 +80,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "📀 Join Updates Channel", url=invite_link.invite_link
+                    "🎥 Jᴏɪɴ Tʜɪs Cʜᴀɴɴᴇʟ", url=invite_link.invite_link
                 )
             ]
         ]
@@ -89,9 +89,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 🔄 Tʀʏ Aɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" 🔄 Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text="**Please Join to DvD Release Channel to use this Bot!**",
