@@ -581,13 +581,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "tips":
-        await query.answer("ᴍᴏᴠɪᴇ\n\nSend Movie Name With Correct Spelling,if you still don't get it, add the Released year\nexample:- Thallumala 2022\n━━━━━━━━━━━━━━━━\nsᴇʀɪᴇs\nSend Series Name With Correct Spelling and Season,Episode.\n\nexample: I Am Groot S01 E01\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True)
+        await query.answer("ᴍᴏᴠɪᴇ\n\nSend Movie Name With Correct Spelling,if you still don't get it, add the Released year\nexample:- Thallumala 2022\n━━━━━━━━━━━━━━━━\nsᴇʀɪᴇs\nSend Series Name With Correct Spelling and Season,Episode.\n\nexample: I Am Groot S01 E01\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True),
     elif query.data == "more":
-        await query.answer("This Is Your Search Results,You mean none of this or please follow tips\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True)
+        await query.answer("This Is Your Search Results,You mean none of this or please follow tips\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True),
     elif query.data == "nomore":
-        await query.answer("🤧No More Size Files", show_alert=True)
+        await query.answer("🤧No More Size Files", show_alert=True),
     elif query.data == "copyright":
-        await query.answer("this message will delete after 5 minutes for avoid copyright claim\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True)
+        await query.answer("this message will delete after 5 minutes for avoid copyright claim\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True),
     elif query.data == "files":
         await query.answer("വിട്ടേക്ക് ഞാൻ എത്ര files ഉണ്ട് എന്ന് കാന്നിച്ചതാ...\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True)
         
@@ -644,7 +644,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Piracy Is Crime')
+    await query.answer('Ham🌜')
     
 
 
@@ -753,7 +753,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Hᴇʏ {message.from_user.mention}</b>👋🏻\n<b>🔍 ʜᴇʀᴇ ɪs ʏᴏᴜʀ ǫᴜᴇʀʏ ʀᴇsᴜʟᴛ</b>: <code>{search}</code>\n<b>© Pᴏᴡᴇʀᴇᴅ ʙʏ </b>: <b>{message.chat.title}</a></b>\nㅤㅤㅤㅤ\n<b><u> Tʜɪs ᴍᴇssᴀɢᴇ ᴡᴀs ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇᴅ ᴀғᴛᴇʀ 15 ᴍɪɴᴜᴛᴇs . Tᴏ ᴀᴠᴏɪᴅ ᴄᴏᴘʏʀɪɢʜᴛ ɪssᴜᴇs.</b></u>"
+        cap = f"Title: {search}\nTotal Files : {len(files)}\n© {message.chat.title}"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -780,7 +780,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("Wʜᴀᴀᴛᴛ!!??.")
         await asyncio.sleep(8)
         await k.delete()
         return
