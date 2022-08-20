@@ -84,7 +84,7 @@ async def next_page(bot, query):
         ]
     btn.insert(0,
         [
-            InlineKeyboardButton(f'♨️ {search} ♨️', url=f'https://www.imdb.com/title/tt{movieid}')
+            InlineKeyboardButton(f'♨️ {search} ♨️', url=f'https://www.imdb.com/title/tt{imdb_id}')
         ]
     )
     btn.insert(1,
