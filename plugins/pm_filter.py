@@ -85,7 +85,7 @@ async def next_page(bot, query):
         ]
     btn.insert(0,
         [
-            InlineKeyboardButton(f'♨️ {search} ♨️', url=f'https://www.imdb.com/title/tt{movieid}')
+            InlineKeyboardButton(f'♨️ {search} ♨️', 'tips')
         ]
     )
     btn.insert(1,
@@ -590,7 +590,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "copyright":
         await query.answer("this message will delete after 5 minutes for avoid copyright claim\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True),
     elif query.data == "files":
-        await query.answer("വിട്ടേക്ക് ഞാൻ എത്ര files ഉണ്ട് എന്ന് കാന്നിച്ചതാ...\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True)
+        await query.answer("വിട്ടേക്ക് ഞാൻ എത്ര files ഉണ്ട് എന്ന് കാന്നിച്ചതാ...\n\n© Wᴀᴢᴇᴇᴍ", show_alert=True),
         
     elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
